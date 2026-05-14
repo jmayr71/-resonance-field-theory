@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+output/
+outputs/
+*.png
+*.gif
+*.mp4
+.DS_Store
