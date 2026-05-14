@@ -1,0 +1,21 @@
+prototype_type: Phase B micro dynamics for best Q≈2 candidate using exact variational gradient
+N: 36
+L: 40.0
+dt: 0.0001
+steps: 36
+kappa: 0.2
+initial_Q_signed: 1.9133016090984525
+final_Q_signed: 1.9133015929154058
+Q_drift: -1.618304668049575e-08
+initial_E_total: 25.675178987869547
+final_E_total: 25.675179114867905
+relative_energy_change: 4.9463475427442165e-09
+max_norm_deviation: 1.0001999228848035e-12
+initial_lump_count: 3
+final_lump_count: 3
+initial_top2_separation: 10.595934412487725
+final_top2_separation: 10.595934392533804
+separation_change: -1.9953921182036538e-08
+
+Interpretation:
+A reduced-grid micro dynamics run around the best Q≈2 static candidate validates the exact-variational method under time evolution. Energy drift is ~5e-9, Q drift is ~1.6e-8, and the topological density geometry remains effectively static over the short window. The reduced grid reports three density lumps, indicating that the lump detector and/or resolution still need refinement before long scattering runs.
