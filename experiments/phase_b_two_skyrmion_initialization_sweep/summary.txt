@@ -1,0 +1,19 @@
+Phase B two-skyrmion initialization sweep complete
+
+Best candidate:
+N: 56
+L: 40.0
+sep: 4.2
+lambda: 7.2
+radius_factor: 0.46
+Q_signed: 1.9565799238756587
+Q_abs: 1.9565799238756587
+Q_error_to_2: 0.04342007612434129
+E_total: 27.06586554577965
+lump_count: 2
+top2_separation: 10.18294230347104
+min_sz: -0.9999753930414885
+mean_sz: 0.5664144856379771
+
+Interpretation:
+The initialization sweep significantly improved the two-skyrmion sector. The best static candidate reaches Q≈1.9566 with two clear topological-density centers. This is sufficiently close to Q=2 to use as the next Phase B conservative dynamics baseline before adding boosts or scattering conditions.
