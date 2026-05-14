@@ -1,0 +1,25 @@
+prototype_type: Phase B improved two-skyrmion initialization, exact variational dynamics
+N: 40
+L: 32.0
+dt: 0.00015
+steps: 120
+kappa: 0.2
+z1: (-2.6+0j)
+z2: (2.6+0j)
+lambda: 4.2
+initial_Q_signed: 1.8656665949413715
+final_Q_signed: 1.8656662632913095
+Q_drift: -3.316500620798024e-07
+initial_Q_abs: 1.8656665949413715
+final_Q_abs: 1.8656662632913095
+initial_E_total: 24.632984995391414
+final_E_total: 24.632984995391418
+relative_energy_change: 1.4422586947806683e-16
+max_norm_deviation: 1.000310945187266e-12
+initial_lump_count: 2
+final_lump_count: 2
+initial_top2_separation: 7.2279758084650485
+final_top2_separation: 7.227975711067257
+
+Interpretation:
+Improved rational-map initialization and boundary/domain choice moved the two-skyrmion sector much closer to Q=2 than the first Phase B run (Q≈1.866 vs Q≈1.570). Exact variational dynamics preserves energy to machine precision and Q drift is negligible. The next step is an initialization sweep over center separation, scale lambda, domain, and boundary radius to get Q closer to 2 before adding boosts/scattering.
