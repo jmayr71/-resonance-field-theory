@@ -1,0 +1,20 @@
+prototype_type: Phase A geometric local spin-precession integrator
+N: 160
+dt: 0.0006
+steps: 3000
+k_sigma: 1.0
+k_skyrme: 0.2
+initial_Q_signed: -0.9984750493717713
+final_Q_signed: -0.9947268741561065
+Q_drift: 0.0037481752156648396
+initial_Q_abs: 0.9984750493717713
+final_Q_abs: 1.3027151224387261
+initial_E_total: 24.400870473176237
+final_E_total: 48.36426480953866
+relative_energy_change: 0.9820712897396537
+max_norm_deviation: 1.0650369475229127e-12
+initial_min_sz: -0.9999999999989999
+final_min_sz: -0.999999999999
+
+Interpretation:
+The local geometric precession update preserves |s| and keeps Q close to -1, but energy conservation is worse than the previous RK4-style prototype. This suggests the main issue is not only the time integrator, but the approximate Skyrme effective field: it is not yet a correct Hamiltonian/variational derivative of the chosen energy functional. The next step should derive and implement the exact variational derivative for the sigma + Skyrme energy, or temporarily disable the approximate Skyrme force and validate pure sigma-model precession first.
