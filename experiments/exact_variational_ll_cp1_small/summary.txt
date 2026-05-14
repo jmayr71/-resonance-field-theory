@@ -1,0 +1,19 @@
+prototype_type: Small exact discrete variational Landau-Lifshitz CP1/S2 with autograd energy gradient
+N: 40
+dt: 0.00035
+steps: 240
+kappa: 0.2
+initial_Q_signed: -0.9318153115530259
+final_Q_signed: -0.9317950587194661
+Q_drift: 2.025283355977514e-05
+initial_Q_abs: 0.9318153115530259
+final_Q_abs: 0.9317950587194661
+initial_E_total: 19.839097973515297
+final_E_total: 19.839097973513624
+relative_energy_change: -8.434497097342265e-14
+max_norm_deviation: 1.000310945187266e-12
+initial_min_sz: -0.9999999999989999
+final_min_sz: -0.999999999999
+
+Interpretation:
+This is the first successful conservative baseline for Phase A. The exact discrete variational gradient of the chosen sigma+Skyrme energy was computed with autograd and used in Landau-Lifshitz precession. Energy is conserved to numerical precision, |s| is preserved, and Q drift is negligible over the short validation run. This confirms that the previous energy drift was caused by the heuristic effective Skyrme field, not by the topological model itself.
