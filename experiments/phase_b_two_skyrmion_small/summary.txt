@@ -1,0 +1,19 @@
+prototype_type: Phase B small exact-variational two-skyrmion conservative dynamics
+N: 32
+dt: 0.00018
+steps: 120
+kappa: 0.2
+initial_Q_signed: 1.5695340365954162
+final_Q_signed: 1.5695197348154786
+Q_drift: -1.430177993766435e-05
+initial_E_total: 21.207599745500488
+final_E_total: 21.207599745500726
+relative_energy_change: 1.1223892346899634e-14
+max_norm_deviation: 1.0001999228848035e-12
+initial_lump_count: 2
+final_lump_count: 2
+initial_top2_separation: 6.506494349964885
+final_top2_separation: 6.67447849980099
+
+Interpretation:
+This is the first successful Phase B baseline: two topological density lumps are evolved with exact discrete variational Landau-Lifshitz dynamics. Energy is conserved to machine precision, Q drift is negligible, and two lumps remain identifiable over the short validation run. The topological charge is not yet close to exactly 2 because this low-resolution rational-map initialization plus hard boundary truncation under-resolves the sector. The next step is improving initialization/resolution before longer scattering experiments.
