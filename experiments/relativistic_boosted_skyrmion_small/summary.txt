@@ -1,0 +1,27 @@
+prototype_type: Small boosted relativistic baby-Skyrme CP1/S2 prototype
+N: 28
+L: 24.0
+dt: 0.00045
+steps: 160
+kappa: 0.2
+mu2: 0.02
+boost_v: 0.2
+initial_Q_signed: -0.9054839518966062
+final_Q_signed: -0.9054762625373034
+Q_drift: 7.689359302842647e-06
+initial_E_total: 20.724287757837015
+final_E_total: 20.722337683295482
+relative_energy_change: -9.409609460742071e-05
+max_norm_deviation: 1.0001999228848035e-12
+max_sp_deviation: 7.563394355258879e-14
+initial_center_x: -1.669499546280756e-11
+final_center_x: 0.008391391640128238
+center_dx: 0.008391391656823234
+initial_center_y: -8.867403448244874e-17
+final_center_y: -9.360116459148661e-17
+center_dy: -4.92713010903787e-18
+initial_E_kinetic: 0.3264592120674335
+final_E_kinetic: 0.331859177523166
+
+Interpretation:
+The boosted relativistic CP1/S2 topological soliton propagates coherently in x direction under second-order constrained dynamics. The topological center shows measurable displacement while topological charge, normalization and tangent-space constraints remain stable. This provides the first project-level evidence that the Skyrmion-like topological structure can exist within a relativistic propagation framework and is not limited to nonrelativistic Landau-Lifshitz precession dynamics.
