@@ -1,0 +1,19 @@
+prototype_type: Small relativistic baby-Skyrme CP1/S2 prototype with constrained momentum
+N: 28
+L: 24.0
+dt: 0.0005
+steps: 100
+kappa: 0.2
+mu2: 0.02
+initial_Q_signed: -0.9054839518966062
+final_Q_signed: -0.9054823813773347
+Q_drift: 1.5705192715209648e-06
+initial_E_total: 20.39782854576958
+final_E_total: 20.396844601534635
+relative_energy_change: -4.823769514182095e-05
+max_norm_deviation: 1.0001999228848035e-12
+max_sp_deviation: 1.734723475976807e-18
+final_E_kinetic: 0.0027247682207101136
+
+Interpretation:
+This is the first successful relativistic baby-Skyrme / CP1 prototype. It replaces Landau-Lifshitz precession with second-order constrained dynamics using a momentum field p=∂t s. The sanity check preserves |s| and s·p constraints to numerical precision, keeps Q stable, and shows acceptable short-run energy drift (~5e-5). This confirms that the CP1/S2 topological structure can be embedded into a relativistic Lagrangian-style dynamics. Next steps: improve resolution/energy conservation and test boosted soliton propagation.
