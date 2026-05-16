@@ -1,0 +1,32 @@
+# Copy this file to terraform.tfvars and adjust values before deployment.
+
+project              = "rft"
+environment          = "research"
+location             = "westeurope"
+admin_username       = "rftadmin"
+ssh_public_key_path  = "~/.ssh/id_rsa.pub"
+
+# IMPORTANT: Set to your own public IP address with /32.
+# Example: allowed_ssh_cidr = "203.0.113.10/32"
+allowed_ssh_cidr     = "CHANGE_ME_TO_YOUR_PUBLIC_IP/32"
+
+# Recommended phase-1 GPU SKU if available and quota-approved.
+# Adjust depending on your Azure region/quota:
+# - Standard_NC24ads_A100_v4  (single A100-class option in many regions)
+# - Standard_ND96asr_v4       (larger/multi-A100 class, expensive)
+# - H100/L40S-capable NC-series if available in your subscription/region
+vm_size              = "Standard_NC24ads_A100_v4"
+
+os_disk_size_gb      = 256
+data_disk_size_gb    = 512
+
+data_disk_lun        = 0
+repo_url             = "https://github.com/jmayr71/-resonance-field-theory.git"
+repo_dir             = "/opt/rft/-resonance-field-theory"
+
+# Auto-shutdown to reduce cost. Time is HHMM in shutdown_timezone.
+shutdown_time        = "2300"
+shutdown_timezone    = "W. Europe Standard Time"
+
+owner_tag            = "johannes"
+cost_center_tag      = "research"
