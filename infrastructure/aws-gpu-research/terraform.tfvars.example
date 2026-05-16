@@ -1,0 +1,25 @@
+# Copy this file to terraform.tfvars and adjust values before deployment.
+
+project              = "rft"
+environment          = "research"
+aws_region           = "eu-central-1"
+availability_zone    = ""
+admin_username       = "ubuntu"
+ssh_public_key_path  = "~/.ssh/id_rsa.pub"
+
+# IMPORTANT: Set to your own public IP address with /32.
+allowed_ssh_cidr     = "CHANGE_ME_TO_YOUR_PUBLIC_IP/32"
+
+# Recommended low-entry GPU option for AWS testing.
+# g5 uses NVIDIA A10G; good for development and medium tests.
+# For larger runs consider p4d/p4de/p5, subject to high cost and quota.
+instance_type        = "g5.2xlarge"
+
+root_volume_size_gb  = 256
+data_volume_size_gb  = 512
+
+repo_url             = "https://github.com/jmayr71/-resonance-field-theory.git"
+repo_dir             = "/opt/rft/-resonance-field-theory"
+
+owner_tag            = "johannes"
+cost_center_tag      = "research"
