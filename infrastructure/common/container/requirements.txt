@@ -1,0 +1,9 @@
+numpy
+scipy
+pandas
+matplotlib
+tqdm
+pyyaml
+rich
+# Optional, install manually if needed and compatible with CUDA/runtime:
+# cupy-cuda12x
