@@ -1,0 +1,39 @@
+# Portable CUDA/PyTorch runtime for resonance field theory simulations.
+#
+# The image is intended to run on Azure, AWS, GCP, local NVIDIA workstations,
+# and tactical GPU providers, as long as the host supports NVIDIA Container Toolkit.
+
+FROM pytorch/pytorch:2.4.1-cuda12.1-cudnn9-runtime
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    RFT_REPO=/workspace/-resonance-field-theory \
+    RFT_RUNS=/runs \
+    RFT_ARTIFACTS=/artifacts
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    git \
+    curl \
+    wget \
+    ca-certificates \
+    build-essential \
+    htop \
+    tmux \
+    jq \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /workspace
+
+COPY requirements.txt /tmp/rft-requirements.txt
+RUN python -m pip install --upgrade pip wheel setuptools \
+    && pip install -r /tmp/rft-requirements.txt
+
+RUN mkdir -p /runs /artifacts
+
+COPY gpu_smoke_test.py /opt/rft/gpu_smoke_test.py
+COPY entrypoint.sh /opt/rft/entrypoint.sh
+RUN chmod +x /opt/rft/entrypoint.sh
+
+ENTRYPOINT ["/opt/rft/entrypoint.sh"]
+CMD ["bash"]
